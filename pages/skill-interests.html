@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/skill.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div id="mobile-menu" class="mobile-menu">
+        <span class="close-menu" onclick="closeMenu()">&times;</span>
+        <nav class="flex flex-col items-center">
+            <a href="../index.html">Home</a>
+            <a href="../pages/projects.html">Career</a>
+            <a href="../pages/contact.html">Contact</a>
+            <a href="../pages/gallery.html">Gallery</a>
+            <a href="../pages/profile.html">Profile</a>
+            <a href="../pages/projects.html">Projects</a>
+        </nav>
+    </div>
+
+    <!-- Background Container with Overlay -->
+    <div class="background-container" id="home-section">
+        <div class="overlay"></div>
+        
+        <!-- Content Wrapper -->
+        <div class="relative z-10">
+            <!-- Header -->
+            <header class="flex items-center justify-between mx-5 py-6">
+                <div class="name flex items-center gap-3 animate-bounce">
+                    <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
+                    <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-white">Usman</div>
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="hamburger" onclick="openMenu()">
+                    &#9776;
+                </div>
+
+                <!-- Navbar -->
+                <nav id="nav" class="flex flex-row justify-evenly w-full text-gray-700 text-lg">
+                    <a href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
+                    <a href="../pages/career-goals.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Career</a>
+                    <a href="../pages/contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
+                    <a href="../pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
+                    <a href="../pages/profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
+                    <a href="../pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+             <!-- Skills Section -->
+<!-- Skills Section inside a Blurred Gradient Card -->
+<section id="skills" class="container mx-auto py-10 px-4">
+    <h2 class="text-3xl font-semibold text-center mb-6 text-white">Skills</h2>
+
+    <!-- Card Wrapper with Blur and Gradient -->
+    <div class="p-6 rounded-lg backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-30 shadow-lg max-w-4xl mx-auto">
+
+        <div class="flex flex-wrap justify-center gap-12">
+            <!-- Skill Item 1: JavaScript -->
+            <div class="skill flex flex-col items-center space-y-4">
+                <!-- Skill Icon -->
+                <img src="../assets/icons/js.png" alt="JavaScript Icon" class="w-16 h-16">
+
+                <!-- Circular Progress Bar -->
+                <div class="relative flex items-center justify-center">
+                    <svg class="w-24 h-24">
+                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
+                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="24" class="progress"></circle>
+                    </svg>
+                    <div class="absolute text-white font-semibold">90%</div>
+                </div>
+
+                <!-- Skill Name -->
+                <h3 class="text-xl text-black font-bold">JavaScript</h3>
+            </div>
+
+            <!-- Skill Item 2: HTML & CSS -->
+            <div class="skill flex flex-col items-center space-y-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML & CSS Icon" class="w-16 h-16">
+                <div class="relative flex items-center justify-center">
+                    <svg class="w-24 h-24">
+                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
+                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="12" class="progress"></circle>
+                    </svg>
+                    <div class="absolute text-white font-semibold">95%</div>
+                </div>
+                <h3 class="text-xl text-black font-bold">HTML & CSS</h3>
+            </div>
+
+            <!-- Skill Item 3: React.js -->
+            <div class="skill flex flex-col items-center space-y-4">
+                <img src="../assets/icons/react.png" alt="React Icon" class="w-16 h-16">
+                <div class="relative flex items-center justify-center">
+                    <svg class="w-24 h-24">
+                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
+                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="35" class="progress"></circle>
+                    </svg>
+                    <div class="absolute text-white font-semibold">85%</div>
+                </div>
+                <h3 class="text-xl text-black font-bold">React.js</h3>
+            </div>
+
+            <!-- Skill Item 4: Node.js -->
+            <div class="skill flex flex-col items-center space-y-4">
+                <img src="../assets/icons/node.png" alt="Node.js Icon" class="w-16 h-16">
+                <div class="relative flex items-center justify-center">
+                    <svg class="w-24 h-24">
+                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
+                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="47" class="progress"></circle>
+                    </svg>
+                    <div class="absolute text-white font-semibold">80%</div>
+                </div>
+                <h3 class="text-xl text-black font-bold">Node.js</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gradient Definition -->
+<svg width="0" height="0">
+    <defs>
+        <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:white; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: white; stop-opacity: 1" />
+        </linearGradient>
+    </defs>
+</svg>
+
+
+             <!-- Skills Section -->
+
+    <!-- Interests Section -->
+    <section id="interests" class="container mx-auto py-10 px-4">
+        <h2 class="text-3xl font-semibold text-center mb-6 text-white">Interests</h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Interest 1: Web Development -->
+            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
+                <!-- Interest Image -->
+                <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Web Development" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Web Development</h3>
+                <p class="text-center">Passionate about building intuitive and responsive web applications that solve real-world problems.</p>
+            </div>
+    
+            <!-- Interest 2: Gaming -->
+            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
+                <img src="../assets/icons/gaming.png" alt="Gaming" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Gaming</h3>
+                <p class="text-center">I enjoy playing and analyzing video games, especially action and strategy-based games that challenge my creativity.</p>
+            </div>
+    
+            <!-- Interest 3: Artificial Intelligence -->
+            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
+                <img src="../assets/icons/ai.png" alt="Artificial Intelligence" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Artificial Intelligence</h3>
+                <p class="text-center">Exploring the potential of AI and machine learning to revolutionize industries and solve complex problems.</p>
+            </div>
+    
+            <!-- Interest 4: Photography -->
+            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
+                <img src="../assets/icons/photo.png" alt="Photography" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Photography</h3>
+                <p class="text-center">I enjoy capturing moments and telling stories through my lens, especially outdoor and landscape photography.</p>
+            </div>
+        </div>
+    </section>
+        
+
+         </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center bg-slate-950 text-white">
+        <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle the navigation menu
+        function openMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('active');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.remove('active');
+        }
+
+        // Smooth scroll to next section
+        function scrollToNextSection() {
+            const nextSection = document.getElementById('next-section');
+            window.scrollTo({
+                top: nextSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>

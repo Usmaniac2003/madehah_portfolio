@@ -1,0 +1,118 @@
+/* Custom font and overall styling */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, .font-heading {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Background image and overlay */
+.background-container {
+    position: relative;
+    height: 160vh;
+    background-image: url('../assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li:before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Footer Styling */
+.footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.background-container
+{
+    height: 190vh;
+}
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+}

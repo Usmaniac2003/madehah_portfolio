@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div id="mobile-menu" class="mobile-menu">
+        <span class="close-menu" onclick="closeMenu()">&times;</span>
+        <nav class="flex flex-col items-center">
+            <a href="./pages/career-goals.html">Career</a>
+            <a href="./pages/contact.html">Contact</a>
+            <a href="./pages/gallery.html">Gallery</a>
+            <a href="./pages/profile.html">Profile</a>
+            <a href="./pages/projects.html">Projects</a>
+            <a href="./pages/skill-interests.html">Skills</a>
+        </nav>
+    </div>
+
+    <!-- Background Container with Overlay -->
+    <div class="background-container" id="home-section">
+        <div class="overlay"></div>
+        <div class="space-gradient"></div>
+        <div class="stars"></div>
+
+        <!-- Content Wrapper -->
+        <div class="relative z-10">
+            <!-- Header -->
+             <header class="flex items-center justify-between  mx-5 py-6">
+    <div class="name flex items-center gap-3 animate-bounce">
+        <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
+        <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-white">Usman</div>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger block md:hidden cursor-pointer text-white text-3xl" onclick="openMenu()">
+        &#9776;
+    </div>
+
+    <!-- Navbar -->
+
+    <nav id="nav" class="hidden md:flex flex-row justify-evenly w-full text-gray-700 text-lg">
+        <a href="./pages/career-goals.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Career</a>
+        <a href="./pages/contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
+        <a href="./pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
+        <a href="./pages/profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
+        <a href="./pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
+        <a href="./pages/skill-interests.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Skills</a>
+    </nav>
+            </header>
+
+            
+            <!-- Main Content -->
+            <main class="mx-10 flex flex-col md:flex-row gap-10 items-center py-10">
+                <div class="picture w-full md:w-[30vw] flex justify-center animate-zoomIn">
+                    <img src="./assets/images/me.jpg" alt="Profile Picture" class="w-64 h-64 rounded-full shadow-lg object-cover">
+                </div>
+                <div class="bio h-auto w-full md:w-[60vw] p-6 rounded-lg shadow-md relative animate-fadeIn backdrop-blur-lg">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-400 opacity-90 rounded-lg"></div>
+                    <div class="relative z-10">
+                        <div class="intro text-2xl font-heading font-bold mb-4 text-white">Hello, I am Usman Ghani, a Software Engineer with 2 years of experience</div>
+                        <div class="bio text-sm mb-12 text-white">
+                            I’m the guy who’s passionate about coding, always exploring new technologies, and tackling challenges head-on. Aiming to become a skilled full-stack developer, constantly learning and growing in the tech world.
+                        </div>
+                        <div class="quote text-white">
+                            "Striving for excellence with every line of code. Innovation, growth, and a passion for tech drive me."
+                        </div>
+                        <div class="links flex flex-col  mt-40 justify-center items-center gap-6 ">
+                            <div class="contactMe">
+                                <a href="#" class="text-lg font-semibold text-white bg-slate-900 px-4 py-2 rounded-lg hover:bg-white hover:text-black transition duration-300">Contact Me</a>
+                            </div>
+                            <div class="socials flex gap-4">
+                                <a href="https://www.linkedin.com/in/usman-ghani-763468255" class="linkedIn transform hover:scale-110 hover:rotate-12 transition duration-300">
+                                    <img src="./assets/icons/linkein.png" alt="LinkedIn" class="w-8 h-8">
+                                </a>
+                                <a href="https://www.instagram.com/usmaniac.03/?igsh=azM0ajRlbm1oYjI2" class="insta transform hover:scale-110 hover:rotate-12 transition duration-300">
+                                    <img src="./assets/icons/insta.png" alt="Instagram" class="w-8 h-8">
+                                </a>
+                                <a href="https://github.com/Usmaniac2003" class="github transform hover:scale-110 hover:rotate-12 transition duration-300">
+                                    <img src="./assets/icons/github.png" alt="GitHub" class="w-8 h-8">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" onclick="scrollToNextSection()">
+            <p>Scroll Down</p>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <section id="next-section" class="min-h-screen text-white py-20 px-4">
+        <div class="overlay"></div>
+        <h2 class="text-4xl font-heading text-center mb-10 relative z-50">Explore More</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Box 1 -->
+            <a href="./pages/career-goals.html" class="nav-box relative group bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg overflow-hidden h-64">
+                <img src="./assets/images/career.jpeg" alt="Career" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="nav-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-500">
+                    <span class="text-2xl font-bold text-white">Career</span>
+                </div>
+            </a>
+            <!-- Box 2 -->
+            <a href="./pages/contact.html" class="nav-box relative group bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg overflow-hidden h-64">
+                <img src="./assets/images/contact.jpeg" alt="Contact" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="nav-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-500">
+                    <span class="text-2xl font-bold text-white">Contact</span>
+                </div>
+            </a>
+            <!-- Box 3 -->
+            <a href="./pages/gallery.html" class="nav-box relative group bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg overflow-hidden h-64">
+                <img src="./assets/images/gallery.jpeg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="nav-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-500">
+                    <span class="text-2xl font-bold text-white">Gallery</span>
+                </div>
+            </a>
+            <!-- Box 4 -->
+            <a href="./pages/profile.html" class="nav-box relative group bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg overflow-hidden h-64">
+                <img src="./assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="nav-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-500">
+                    <span class="text-2xl font-bold text-white">Profile</span>
+                </div>
+            </a>
+            <!-- Box 5 -->
+            <a href="./pages/projects.html" class="nav-box relative group bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg overflow-hidden h-64">
+                <img src="./assets/images/projects.jpeg" alt="Projects" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="nav-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-500">
+                    <span class="text-2xl font-bold text-white">Projects</span>
+                </div>
+            </a>
+            <!-- Box 6 -->
+            <a href="./pages/skill-interests.html" class="nav-box relative group bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg overflow-hidden h-64">
+                <img src="./assets/images/skills.png" alt="Skills" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="nav-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition duration-500">
+                    <span class="text-2xl font-bold text-white">Skills</span>
+                </div>
+            </a>
+          </div>
+                   </section>
+            
+                <!-- Footer -->
+                <footer class="footer py-4 text-center bg-slate-950 text-white">
+                    <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
+                </footer>
+            
+                <!-- JavaScript -->
+                <script>
+                    // Toggle the navigation menu
+                    function openMenu() {
+                        const menu = document.getElementById('mobile-menu');
+                        menu.classList.add('active');
+                    }
+            
+                    function closeMenu() {
+                        const menu = document.getElementById('mobile-menu');
+                        menu.classList.remove('active');
+                    }
+            
+                    // Smooth scroll to next section
+                    function scrollToNextSection() {
+                        const nextSection = document.getElementById('next-section');
+                        window.scrollTo({
+                            top: nextSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                </script>
+            </body>
+            
+            </html>
+            

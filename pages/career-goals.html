@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/career.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div id="mobile-menu" class="mobile-menu">
+        <span class="close-menu" onclick="closeMenu()">&times;</span>
+        <nav class="flex flex-col items-center">
+            <a href="../index.html">Home</a>
+            <a href="../pages/contact.html">Contact</a>
+            <a href="../pages/gallery.html">Gallery</a>
+            <a href="../pages/profile.html">Profile</a>
+            <a href="../pages/projects.html">Projects</a>
+            <a href="../pages/skill-interests.html">Skills</a>
+        </nav>
+    </div>
+
+    <!-- Background Container with Overlay -->
+    <div class="background-container" id="home-section">
+        <div class="overlay"></div>
+        
+        <!-- Content Wrapper -->
+        <div class="relative z-10">
+            <!-- Header -->
+            <header class="flex items-center justify-between mx-5 py-6">
+                <div class="name flex items-center gap-3 animate-bounce">
+                    <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
+                    <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-white">Usman</div>
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="hamburger" onclick="openMenu()">
+                    &#9776;
+                </div>
+
+                <!-- Navbar -->
+                <nav id="nav" class="flex flex-row justify-evenly w-full text-gray-700 text-lg">
+                    <a href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
+                    <a href="../pages/contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
+                    <a href="../pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
+                    <a href="../pages/profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
+                    <a href="../pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
+                    <a href="../pages/skill-interests.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Skills</a>
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+  <!-- Main Career Goals Section -->
+  <main class="text-center mt-10 mx-6 text-white">
+    <h2 class="text-white text-3xl font-bold mb-8">Career Goals</h2>
+    <!-- Short-Term Goals Section -->
+    <section id="short-term-goals" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg mb-10">
+        <h2 class="text-2xl font-heading mb-4">Short-Term Goals</h2>
+        <ul class="list-disc text-left pl-5 space-y-3">
+            <li>Enhance my knowledge of MERN stack development.</li>
+            <li>Build and contribute to open-source projects to strengthen my portfolio.</li>
+            <li>Expand my knowledge in mobile app development with React Native.</li>
+        </ul>
+    </section>
+
+    <!-- Long-Term Goals Section -->
+    <section id="long-term-goals" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg mb-10">
+        <h2 class="text-2xl font-heading mb-4">Long-Term Goals</h2>
+        <ul class="list-disc text-left pl-5 space-y-3">
+            <li>Secure a senior software engineering role at a leading tech company.</li>
+            <li>Start my own tech startup and lead innovative projects.</li>
+            <li>Contribute to the developer community through mentorship and workshops.</li>
+        </ul>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="call-to-action" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-heading mb-4">My Drive</h2>
+        <p class="text-lg quote font-mono">"Success is not final, failure is not fatal: It is the courage to continue that counts." – Winston Churchill</p>
+        <p class="mt-4 text-lg">I am dedicated to pushing boundaries and achieving my career goals, one step at a time.</p>
+    </section>
+</main>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center bg-slate-950 text-white">
+        <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle the navigation menu
+        function openMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('active');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.remove('active');
+        }
+
+        // Smooth scroll to next section
+        function scrollToNextSection() {
+            const nextSection = document.getElementById('next-section');
+            window.scrollTo({
+                top: nextSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>

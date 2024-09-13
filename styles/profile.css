@@ -1,0 +1,155 @@
+/* Background container and overlay */
+.background-container {
+    position: relative;
+    height: 180vh;
+    background-image: url('../assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Blurred box styling */
+.backdrop-blur-md {
+    backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-lg {
+    backdrop-filter: blur(20px);
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+.footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Mobile Menu styles */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Adjust background height for mobile */
+    .background-container {
+        height: 260vh;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #name {
+        font-size: 20px;
+    }
+}
+
+.social-icon
+{
+    height: 40px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 1rem 0;
+    transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: #d4d4d8;
+    text-decoration: underline;
+}
+
+.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    
+    .hamburger {
+        display: none;
+    }
+}

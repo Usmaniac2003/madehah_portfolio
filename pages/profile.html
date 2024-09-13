@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/profile.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <span class="close-menu" onclick="closeMenu()">&times;</span>
+        <nav class="flex flex-col items-center">
+            <a href="../index.html">Home</a>
+            <a href="../pages/projects.html">Career</a>
+            <a href="../pages/contact.html">Contact</a>
+            <a href="../pages/gallery.html">Gallery</a>
+            <a href="../pages/projects.html">Projects</a>
+            <a href="../pages/skill-interests.html">Skills</a>
+        </nav>
+    </div>
+
+    <!-- Background Container with Overlay -->
+    <div class="background-container" id="home-section">
+        <div class="overlay"></div>
+
+        <!-- Content Wrapper -->
+        <div class="relative z-10">
+
+            <!-- Header -->
+            <header class="flex items-center justify-between mx-5 py-6">
+                <div class="name flex items-center gap-3 animate-bounce">
+                    <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
+                    <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading text-white">Usman</div>
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="hamburger" onclick="openMenu()">&#9776;</div>
+
+                <!-- Navbar -->
+                <nav id="nav" class="flex flex-row justify-evenly w-full text-gray-700 text-lg">
+                    <a href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
+                    <a href="../pages/career-goals.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Career</a>
+                    <a href="../pages/contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
+                    <a href="../pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
+                    <a href="../pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
+                    <a href="../pages/skill-interests.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Skills</a>
+                </nav>
+            </header>
+
+            <!-- Profile Section -->
+            <section class="flex flex-col items-center mt-10 space-y-10">
+                
+                <!-- Profile Picture Section -->
+                <div class="w-80 h-80 rounded-full overflow-hidden relative backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-2">
+                    <img src="../assets/images/me.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-full">
+                </div>
+
+                <!-- Bio Section -->
+                <div class="mb-16 w-4/5 md:w-3/5 lg:w-1/2 backdrop-blur-lg bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg">
+                    <h1 class="text-2xl text-white font-heading mb-4 font-bold">About Me</h1>
+                    <p class="text-white text-lg">
+                        
+                        I am Usman Ghani, a Software Engineer from Karachi, Pakistan, with a strong educational foundation and professional skills in full-stack development. My journey began with completing O-levels and FSc, which laid the groundwork for pursuing higher education. I then earned my Bachelor's degree in Software Engineering (BS SE), which equipped me with in-depth knowledge of various aspects of software development, including algorithms, databases, and system architecture.
+                        
+                        Over time, I honed my skills in the MERN stack (MongoDB, Express, React, Node.js), becoming proficient in both front-end and back-end development. As a full-stack developer, I am capable of designing and building dynamic, responsive web applications from scratch, integrating user interfaces with robust server-side functionality. My passion for software engineering drives me to continually learn and adapt to new technologies, ensuring I stay at the forefront of industry trends.
+                    </p>
+                    <h2 class="text-xl text-white font-heading my-4 font-bold">Connect with me</h2>
+                    <div class="flex space-x-6 text-white">
+                        <a href="https://www.linkedin.com/in/usman-ghani-763468255/" class="hover:underline transition duration-300"> <img class="social-icon" src="../assets/icons/linkein.png" alt=""></a>
+                        <a href="https://github.com/Usmaniac2003" class="hover:underline transition duration-300"> <img class="social-icon" src="../assets/icons/github.png" alt=""></a>
+                        <a href="https://www.instagram.com/usmaniac.03/?igsh=azM0ajRlbm1oYjI2" class="hover:underline transition duration-300"> <img class="social-icon" src="../assets/icons/insta.png" alt=""></a>
+                    </div>
+                </div>
+
+                
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center bg-slate-950 text-white">
+        <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle the navigation menu
+        function openMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('active');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
