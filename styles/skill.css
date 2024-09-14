@@ -10,7 +10,7 @@ h1, .font-heading {
 /* Background image and overlay styles */
 .background-container {
     position: relative;
-    height: 160vh;
+    height: 170vh;
     background-image: url('../assets/images/bg.jpg');
     background-size: cover;
     background-position: center;
