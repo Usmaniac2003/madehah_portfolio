@@ -11,117 +11,112 @@
     <title>Home</title>
 </head>
 
-<body>
-    <div id="mobile-menu" class="mobile-menu">
+<body class="bg-white ">
+   
+
+    <!-- Header -->
+    <header class="flex items-center justify-between  mx-5 py-6">
+        <div class="name flex items-center gap-3 ">
+        <div class="circle w-6 h-6 rounded-full bg-yellow-300"></div>
+        <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-black">Maadehah</div>
+        </div>
+        
+        <!-- Hamburger Menu -->
+        <div class="hamburger block md:hidden cursor-pointer text-black text-3xl" onclick="openMenu()">
+        &#9776;
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
         <span class="close-menu" onclick="closeMenu()">&times;</span>
         <nav class="flex flex-col items-center">
             <a href="../index.html">Home</a>
-            <a href="../pages/projects.html">Career</a>
-            <a href="../pages/gallery.html">Gallery</a>
-            <a href="../pages/profile.html">Profile</a>
-            <a href="../pages/projects.html">Projects</a>
-            <a href="../pages/skill-interests.html">Skills</a>
+            <a href="./career-goals.html">Career</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./skill-interests.html">Skills</a>
         </nav>
-    </div>
-
-    <!-- Background Container with Overlay -->
-    <div class="background-container" id="home-section">
-        <div class="overlay"></div>
+        </div>
         
-        <!-- Content Wrapper -->
-        <div class="relative z-10">
-            <!-- Header -->
-            <header class="flex items-center justify-between mx-5 py-6">
-                <div class="name flex items-center gap-3 animate-bounce">
-                    <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
-                    <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-white">Usman</div>
-                </div>
-
-                <!-- Hamburger Menu -->
-                <div class="hamburger" onclick="openMenu()">
-                    &#9776;
-                </div>
-
-                <!-- Navbar -->
-                <nav id="nav" class="flex flex-row justify-evenly w-full text-gray-700 text-lg">
-                    <a href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
-                    <a href="../pages/career-goals.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Career</a>
-                    <a href="../pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
-                    <a href="../pages/profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
-                    <a href="../pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
-                    <a href="../pages/skill-interests.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Skills</a>
-                </nav>
+        <!-- Navbar -->
+        
+        <nav id="nav" class="hidden md:flex flex-row justify-evenly w-full text-gray-700 text-lg">
+        <a class="text-black" href="../index.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Home</a>
+        <a class="text-black" href="./career-goals.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Career</a>
+        <a class="text-black" href="./gallery.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Gallery</a>
+        <a class="text-black" href="./profile.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Profile</a>
+        <a class="text-black" href="./projects.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Projects</a>
+        <a class="text-black" href="./skill-interests.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Skills</a>
+        </nav>
             </header>
+        
+    <!-- Main             -->
+    <main class="min-h-screen py-12 px-5 bg-gradient-to-b from-yellow-100 via-white to-yellow-100 flex flex-col items-center">
 
-            <!-- Main Content -->
-            <main class="text-center mt-10 mx-8 text-white">
-                <h1 class="text-white text-3xl mb-8">Contact Me</h1>
-                <!-- Contact Form Section -->
-                <section id="contact-form" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg mb-10">
-                    <h2 class="text-2xl font-heading mb-4">Get in Touch</h2>
-                    <form action="https://formspree.io/f/xblreywd" method="POST" class="space-y-12">
-                        <div>
-                            <label for="name" class="block text-left text-white">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full p-2 rounded-md bg-white text-black focus:ring-2 focus:ring-purple-600">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-left text-white">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full p-2 rounded-md bg-white text-black focus:ring-2 focus:ring-purple-600">
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-left text-white">Subject</label>
-                            <input type="text" id="subject" name="subject" required class="w-full p-2 rounded-md bg-white text-black focus:ring-2 focus:ring-purple-600">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-left text-white">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full p-2 rounded-md bg-white text-black focus:ring-2 focus:ring-purple-600"></textarea>
-                        </div>
-                        <button type="submit" class="w-36 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition duration-300">Send Message</button>
-                    </form>
-                </section>
-            
-                <!-- Contact Information Section -->
-                <section id="contact-info" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-heading mb-4">Contact Information</h2>
-                    <p class="text-lg">Feel free to reach out to me via email or phone.</p>
-                    <div class="mt-6">
-                        <p><strong>Email:</strong> usmancodepro@gmail.com</p>
-                        <p><strong>Phone:</strong> +92-336-1287153</p>
-                    </div>
-                </section>
-            </main>
-            
-         </div>
+        <!-- Contact Form -->
+        <section class="w-full max-w-3xl bg-white bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl p-8 my-8 border-t-4 border-yellow-500 transition transform hover:scale-105 duration-300">
+            <h2 class="text-3xl font-bold text-black mb-6 text-center">Contact Me</h2>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-semibold text-black">Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-semibold text-black">Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div>
+                    <label for="subject" class="block text-lg font-semibold text-black">Subject:</label>
+                    <input type="text" id="subject" name="subject" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-semibold text-black">Message:</label>
+                    <textarea id="message" name="message" required rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-black text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300">Submit</button>
+                </div>
+            </form>
+        </section>
+    
+        <!-- Email and Phone Information -->
+        <section class="w-full max-w-3xl bg-white bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl p-8 my-8 text-center">
+            <h2 class="text-2xl font-bold text-black mb-4">Contact Information</h2>
+            <p class="text-lg text-gray-800">Email: <a href="mailto:maadehah@example.com" class="text-yellow-600 hover:underline">maadehah@example.com</a></p>
+            <p class="text-lg text-gray-800">Phone: <span class="text-yellow-600">+123-456-7890</span></p>
+        </section>
+    
+    </main>
+    
 
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer py-4 text-center bg-slate-950 text-white">
-        <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Toggle the navigation menu
-        function openMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.add('active');
-        }
-
-        function closeMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.remove('active');
-        }
-
-        // Smooth scroll to next section
-        function scrollToNextSection() {
-            const nextSection = document.getElementById('next-section');
-            window.scrollTo({
-                top: nextSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-</body>
+    
+        <!-- Footer -->
+        <footer class="footer py-4 text-center bg-slate-950 text-white">
+            <p>&copy; 2024 Maadehah. All rights reserved.</p>
+        </footer>
+    
+        <!-- JavaScript -->
+        <script>
+            // Toggle the navigation menu
+            function openMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.add('active');
+            }
+    
+            function closeMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.remove('active');
+            }
+    
+            // Smooth scroll to next section
+            function scrollToNextSection() {
+                const nextSection = document.getElementById('next-section');
+                window.scrollTo({
+                    top: nextSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+    </body>
 
 </html>

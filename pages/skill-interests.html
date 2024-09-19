@@ -11,199 +11,180 @@
     <title>Home</title>
 </head>
 
-<body>
-    <div id="mobile-menu" class="mobile-menu">
+<body class="bg-white">
+   
+
+    <!-- Header -->
+    <header class="flex items-center justify-between  mx-5 py-6">
+        <div class="name flex items-center gap-3 ">
+        <div class="circle w-6 h-6 rounded-full bg-yellow-300"></div>
+        <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-black">Maadehah</div>
+        </div>
+        
+        <!-- Hamburger Menu -->
+        <div class="hamburger block md:hidden cursor-pointer text-black text-3xl" onclick="openMenu()">
+        &#9776;
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
         <span class="close-menu" onclick="closeMenu()">&times;</span>
         <nav class="flex flex-col items-center">
             <a href="../index.html">Home</a>
-            <a href="../pages/projects.html">Career</a>
-            <a href="../pages/contact.html">Contact</a>
-            <a href="../pages/gallery.html">Gallery</a>
-            <a href="../pages/profile.html">Profile</a>
-            <a href="../pages/projects.html">Projects</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./career-goals.html">Career</a>
         </nav>
-    </div>
-
-    <!-- Background Container with Overlay -->
-    <div class="background-container" id="home-section">
-        <div class="overlay"></div>
+        </div>
         
-        <!-- Content Wrapper -->
-        <div class="relative z-10">
-            <!-- Header -->
-            <header class="flex items-center justify-between mx-5 py-6">
-                <div class="name flex items-center gap-3 animate-bounce">
-                    <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
-                    <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-white">Usman</div>
-                </div>
-
-                <!-- Hamburger Menu -->
-                <div class="hamburger" onclick="openMenu()">
-                    &#9776;
-                </div>
-
-                <!-- Navbar -->
-                <nav id="nav" class="flex flex-row justify-evenly w-full text-gray-700 text-lg">
-                    <a href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
-                    <a href="../pages/career-goals.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Career</a>
-                    <a href="../pages/contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
-                    <a href="../pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
-                    <a href="../pages/profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
-                    <a href="../pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
-                </nav>
+        <!-- Navbar -->
+        
+        <nav id="nav" class="hidden md:flex flex-row justify-evenly w-full text-gray-700 text-lg">
+        <a class="text-black" href="../index.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Home</a>
+        <a class="text-black" href="./contact.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Contact</a>
+        <a class="text-black" href="./gallery.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Gallery</a>
+        <a class="text-black" href="./profile.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Profile</a>
+        <a class="text-black" href="./projects.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Projects</a>
+        <a class="text-black" href="./career-goals.html" class="hover:text-yellow-600 text-white hover:underline transition duration-300">Career</a>
+        </nav>
             </header>
-
-            <!-- Main Content -->
-             <!-- Skills Section -->
-<!-- Skills Section inside a Blurred Gradient Card -->
-<section id="skills" class="container mx-auto py-10 px-4">
-    <h2 class="text-3xl font-semibold text-center mb-6 text-white">Skills</h2>
-
-    <!-- Card Wrapper with Blur and Gradient -->
-    <div class="p-6 rounded-lg backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-30 shadow-lg max-w-4xl mx-auto">
-
-        <div class="flex flex-wrap justify-center gap-12">
-            <!-- Skill Item 1: JavaScript -->
-            <div class="skill flex flex-col items-center space-y-4">
-                <!-- Skill Icon -->
-                <img src="../assets/icons/js.png" alt="JavaScript Icon" class="w-16 h-16">
-
-                <!-- Circular Progress Bar -->
-                <div class="relative flex items-center justify-center">
-                    <svg class="w-24 h-24">
-                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
-                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="24" class="progress"></circle>
-                    </svg>
-                    <div class="absolute text-white font-semibold">90%</div>
-                </div>
-
-                <!-- Skill Name -->
-                <h3 class="text-xl text-black font-bold">JavaScript</h3>
-            </div>
-
-            <!-- Skill Item 2: HTML & CSS -->
-            <div class="skill flex flex-col items-center space-y-4">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML & CSS Icon" class="w-16 h-16">
-                <div class="relative flex items-center justify-center">
-                    <svg class="w-24 h-24">
-                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
-                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="12" class="progress"></circle>
-                    </svg>
-                    <div class="absolute text-white font-semibold">95%</div>
-                </div>
-                <h3 class="text-xl text-black font-bold">HTML & CSS</h3>
-            </div>
-
-            <!-- Skill Item 3: React.js -->
-            <div class="skill flex flex-col items-center space-y-4">
-                <img src="../assets/icons/react.png" alt="React Icon" class="w-16 h-16">
-                <div class="relative flex items-center justify-center">
-                    <svg class="w-24 h-24">
-                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
-                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="35" class="progress"></circle>
-                    </svg>
-                    <div class="absolute text-white font-semibold">85%</div>
-                </div>
-                <h3 class="text-xl text-black font-bold">React.js</h3>
-            </div>
-
-            <!-- Skill Item 4: Node.js -->
-            <div class="skill flex flex-col items-center space-y-4">
-                <img src="../assets/icons/node.png" alt="Node.js Icon" class="w-16 h-16">
-                <div class="relative flex items-center justify-center">
-                    <svg class="w-24 h-24">
-                        <circle cx="50%" cy="50%" r="38" stroke="#4B5563" stroke-width="5" fill="none"></circle>
-                        <circle cx="50%" cy="50%" r="38" stroke="url(#progress-gradient)" stroke-width="5" fill="none" stroke-dasharray="238" stroke-dashoffset="47" class="progress"></circle>
-                    </svg>
-                    <div class="absolute text-white font-semibold">80%</div>
-                </div>
-                <h3 class="text-xl text-black font-bold">Node.js</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gradient Definition -->
-<svg width="0" height="0">
-    <defs>
-        <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:white; stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: white; stop-opacity: 1" />
-        </linearGradient>
-    </defs>
-</svg>
-
-
-             <!-- Skills Section -->
-
-    <!-- Interests Section -->
-    <section id="interests" class="container mx-auto py-10 px-4">
-        <h2 class="text-3xl font-semibold text-center mb-6 text-white">Interests</h2>
-    
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Interest 1: Web Development -->
-            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
-                <!-- Interest Image -->
-                <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Web Development" class="w-24 h-24 mx-auto mb-4">
-                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Web Development</h3>
-                <p class="text-center">Passionate about building intuitive and responsive web applications that solve real-world problems.</p>
-            </div>
-    
-            <!-- Interest 2: Gaming -->
-            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
-                <img src="../assets/icons/gaming.png" alt="Gaming" class="w-24 h-24 mx-auto mb-4">
-                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Gaming</h3>
-                <p class="text-center">I enjoy playing and analyzing video games, especially action and strategy-based games that challenge my creativity.</p>
-            </div>
-    
-            <!-- Interest 3: Artificial Intelligence -->
-            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
-                <img src="../assets/icons/ai.png" alt="Artificial Intelligence" class="w-24 h-24 mx-auto mb-4">
-                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Artificial Intelligence</h3>
-                <p class="text-center">Exploring the potential of AI and machine learning to revolutionize industries and solve complex problems.</p>
-            </div>
-    
-            <!-- Interest 4: Photography -->
-            <div class="interest backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg">
-                <img src="../assets/icons/photo.png" alt="Photography" class="w-24 h-24 mx-auto mb-4">
-                <h3 class="text-2xl font-semibold mb-4 text-white text-center">Photography</h3>
-                <p class="text-center">I enjoy capturing moments and telling stories through my lens, especially outdoor and landscape photography.</p>
-            </div>
-        </div>
-    </section>
         
+    <!-- Main             -->
+    <main class="min-h-screen p-6 bg-gradient-to-b from-yellow-100 via-white to-yellow-100">
+        <!-- Skills Section -->
+        <section id="skills" class="mb-12">
+            <h2 class="text-3xl font-extrabold text-center text-black mb-4">Skills</h2>
+            <div class="flex flex-wrap gap-8 justify-center">
+                <!-- Skill 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-32 h-32">
+                        <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-gray-200" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                            <path class="text-yellow-400" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" stroke-dasharray="90 100" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-xl font-semibold text-black">90%</span>
+                        </div>
+                    </div>
+                    <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML & CSS" class="w-10 h-10 mt-2">
+                </div>
+                <!-- Skill 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-32 h-32">
+                        <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-gray-200" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                            <path class="text-yellow-400" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" stroke-dasharray="85 100" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-xl font-semibold text-black">85%</span>
+                        </div>
+                    </div>
+                    <img src="../assets/icons/js.png" alt="JavaScript" class="w-10 h-10 mt-2">
+                </div>
+                <!-- Skill 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-32 h-32">
+                        <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-gray-200" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                            <path class="text-yellow-400" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" stroke-dasharray="80 100" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-xl font-semibold text-black">80%</span>
+                        </div>
+                    </div>
+                    <img src="../assets/icons/react.png" alt="React" class="w-10 h-10 mt-2">
+                </div>
+                <!-- Skill 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-32 h-32">
+                        <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-gray-200" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                            <path class="text-yellow-400" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" stroke-dasharray="75 100" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-xl font-semibold text-black">75%</span>
+                        </div>
+                    </div>
+                    <img src="../assets/icons/node.png" alt="Node.js" class="w-10 h-10 mt-2">
+                </div>
+                <!-- Skill 5 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-32 h-32">
+                        <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-gray-200" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                            <path class="text-yellow-400" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" stroke-dasharray="70 100" d="M18 2.5a15.5 15.5 0 1 1 0 31 15.5 15.5 0 0 1 0-31"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-xl font-semibold text-black">70%</span>
+                        </div>
+                    </div>
+                    <img src="../assets/icons/python.png" alt="Python" class="w-10 h-10 mt-2">
+                </div>
+            </div>
+        </section>
+    
+        <!-- Interests Section -->
+        <section id="interests" class="py-12 ">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 text-center">Interests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <!-- Interest 1 -->
+                <div class="bg-yellow-50 border border-yellow-400 rounded-lg shadow-lg p-4 overflow-hidden">
+                    <img src="../assets/images/graphic.jpeg" alt="Graphic Design" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Graphic Design</h3>
+                        <p class="text-gray-600">I enjoy experimenting with design tools and creating visually engaging content. Graphic design allows me to express my creativity and develop unique visual styles.</p>
+                    </div>
+                </div>
+                <!-- Interest 2 -->
+                <div class="bg-yellow-50 border border-yellow-400 rounded-lg shadow-lg p-4 overflow-hidden">
+                    <img src="../assets/images/photo.webp" alt="Photography" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Photography</h3>
+                        <p class="text-gray-600">Capturing moments through photography lets me view the world from different perspectives and express my creativity. I enjoy experimenting with different styles and techniques.</p>
+                    </div>
+                </div>
+                <!-- Interest 3 -->
+                <div class="bg-yellow-50 border border-yellow-400 rounded-lg shadow-lg p-4 overflow-hidden">
+                    <img src="../assets/images/sports.jpeg" alt="Sports" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Sports</h3>
+                        <p class="text-gray-600">Engaging in sports keeps me active and balanced. Whether it's playing or watching, sports offer a great way to unwind and enjoy some healthy competition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
 
-         </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer py-4 text-center bg-slate-950 text-white">
-        <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Toggle the navigation menu
-        function openMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.add('active');
-        }
-
-        function closeMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.remove('active');
-        }
-
-        // Smooth scroll to next section
-        function scrollToNextSection() {
-            const nextSection = document.getElementById('next-section');
-            window.scrollTo({
-                top: nextSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-</body>
-
+    
+        <!-- Footer -->
+        <footer class="footer py-4 text-center bg-slate-950 text-white">
+            <p>&copy; 2024 Maadehah. All rights reserved.</p>
+        </footer>
+    
+        <!-- JavaScript -->
+        <script>
+            // Toggle the navigation menu
+            function openMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.add('active');
+            }
+    
+            function closeMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.remove('active');
+            }
+    
+            // Smooth scroll to next section
+            function scrollToNextSection() {
+                const nextSection = document.getElementById('next-section');
+                window.scrollTo({
+                    top: nextSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+    </body>
 </html>

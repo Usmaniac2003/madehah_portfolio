@@ -1,53 +1,18 @@
-/* Custom font and overall styling */
-body {
+ /* Apply custom fonts */
+ body {
     font-family: 'Poppins', sans-serif;
 }
 
 h1, .font-heading {
     font-family: 'Roboto Slab', serif;
 }
-
-/* Background image and overlay */
-.background-container {
-    position: relative;
-    height: 160vh;
-    background-image: url('../assets/images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+body{
+    min-height: 100vh;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-}
 
-/* Section Styling */
-section {
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
 
-ul {
-    list-style: none;
-}
 
-ul li {
-    position: relative;
-    padding-left: 20px;
-}
-
-ul li:before {
-    content: "\2022";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: white;
-    font-size: 1.5rem;
-}
-
-/* Footer Styling */
 .footer {
     background: #111;
     padding: 20px;
@@ -60,7 +25,45 @@ ul li:before {
     font-size: 0.875rem;
 }
 
-/* Mobile Menu Styling */
+/* Navbar styles for mobile */
+.nav-menu {
+    display: none;
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    #nav{
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    #name{
+        font-size: 20px;
+    }
+}
+
+
+/* mobile menu */
+/* Mobile Menu styles */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -79,12 +82,21 @@ ul li:before {
 
 .mobile-menu.active {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-menu a {
     color: white;
+    text-decoration: none;
     font-size: 2rem;
     margin: 1rem 0;
+    transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: #d4d4d8;
+    text-decoration: underline;
 }
 
 .close-menu {
@@ -96,26 +108,33 @@ ul li:before {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-.background-container
-{
-    height: 190vh;
+.hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
 }
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: white;
-    }
 
-    #nav {
+@media (min-width: 768px) {
+    
+    .hamburger {
         display: none;
     }
+}
 
-    .mobile-menu.active {
+@media (max-width: 768px) {
+    .links
+    {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+    .background-container{
+        height: 200vh;
     }
 }
+
 /* For Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
     width: 8px; /* Set the width of the scrollbar */

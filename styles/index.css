@@ -6,108 +6,12 @@
 h1, .font-heading {
     font-family: 'Roboto Slab', serif;
 }
-
-/* Background image and overlay styles */
-.background-container {
-    position: relative;
-    height: 140vh;
-    background-image: url('../assets/images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-@media (max-width: 768px) {
-    .background-container{
-        height: 140vh;
-    }
-}
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.space-gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 25, 0.8), rgba(0, 0, 60, 0.6), rgba(25, 0, 60, 0.8));
-    opacity: 0.8;
-    z-index: 0;
-}
-
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('./assets/images/stars.png');
-    opacity: 0.5;
-    z-index: 1;
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-
-.scroll-indicator p {
-    color: white;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.scroll-indicator .arrow {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 8px;
-    transform: rotate(45deg);
-    animation: bounce 2s infinite;
-}
-
-    #next-section
-{
-    position: relative;
-    background-image: url('../assets/images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+body{
+    min-height: 100vh;
 }
 
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
 
-.quote {
-    margin-top: 40px;
-    font-size: 1.25rem;
-    font-style: italic;
-    color: #d4d4d8;
-    text-align: center;
-    line-height: 1.6;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .footer {
     background: #111;
@@ -250,3 +154,10 @@ h1, .font-heading {
     background-color: #555; /* Darken the thumb when hovered */
 }
 
+/* Real Css */
+.main
+{
+    background-image: url("../assets/images/cat_bg.webp");
+    background-size: cover;
+    background-position: center;
+}

@@ -1,59 +1,14 @@
-/* Apply custom fonts */
-body {
+ /* Apply custom fonts */
+ body {
     font-family: 'Poppins', sans-serif;
 }
 
 h1, .font-heading {
     font-family: 'Roboto Slab', serif;
 }
-
-/* Background image and overlay styles */
-.background-container {
-    position: relative;
-    height: 120vh;
-    background-image: url('../assets/images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+body{
+    min-height: 100vh;
 }
-
-@media (max-width: 1240px) {
-    .background-container {
-        height: 170vh;
-    }
-}
-
-@media (max-width: 1000px) {
-    .background-container {
-        height: 220vh;
-    }
-}
-@media (max-width: 800px) {
-    .background-container {
-        height: 260vh;
-    }
-}
-
-@media (max-width: 500px) {
-    .background-container {
-        height: 300vh;
-    }
-}
-
-@media (max-width: 360px) {
-    .background-container {
-        height: 330vh;
-    }
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -103,7 +58,7 @@ h1, .font-heading {
         color: white;
     }
 
-    #nav {
+    #nav{
         display: none;
     }
 
@@ -111,11 +66,13 @@ h1, .font-heading {
         display: flex;
     }
 
-    #name {
+    #name{
         font-size: 20px;
     }
 }
 
+
+/* mobile menu */
 /* Mobile Menu styles */
 .mobile-menu {
     display: none;
@@ -169,10 +126,25 @@ h1, .font-heading {
 }
 
 @media (min-width: 768px) {
+    
     .hamburger {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .links
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+    .background-container{
+        height: 200vh;
+    }
+}
+
 /* For Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
     width: 8px; /* Set the width of the scrollbar */
